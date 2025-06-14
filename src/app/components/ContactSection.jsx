@@ -27,14 +27,14 @@ export default function ContactSection() {
                 name="name"
                 placeholder="Your name"
                 required
-                className="flex-1 border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent"
+                className="flex-1 border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent placeholder-black text-black font-bold"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Your email"
                 required
-                className="flex-1 border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent"
+                className="flex-1 border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent placeholder-black text-black font-bold"
               />
             </div>
             <textarea
@@ -42,7 +42,7 @@ export default function ContactSection() {
               placeholder="Your message"
               required
               rows={4}
-              className="border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent resize-none mb-4"
+              className="border-b border-gray-300 focus:outline-none focus:border-[#ff5c1a] py-2 px-1 bg-transparent resize-none mb-4 placeholder-black text-black font-bold"
             />
             <button
               type="submit"

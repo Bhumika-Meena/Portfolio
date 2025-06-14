@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
   return (
-    <nav className="w-full flex items-center justify-between px-8 py-4 bg-[#0a1633]/30 backdrop-blur-md text-white">
+    <nav className="w-full flex items-center justify-between px-8 py-4 text-white">
       <div />
       <ul className="hidden md:flex space-x-8 text-lg items-center">
         <li><Link href="#home" className="hover:text-[#ff5c1a] transition">Home</Link></li>
