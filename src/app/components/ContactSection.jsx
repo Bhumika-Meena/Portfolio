@@ -52,7 +52,7 @@ export default function ContactSection() {
           variants={formVariants}
         >
           <form
-            action="https://formspree.io/f/yourFormID" // Replace with your Formspree form ID
+            action="https://formspree.io/f/xnnvdkyl" // Replace with your Formspree form ID
             method="POST"
             className="bg-white rounded-2xl shadow-xl px-8 py-10 flex flex-col gap-6 w-full max-w-lg transform hover:scale-105 transition-transform duration-300 ease-in-out"
             onSubmit={() => setSubmitted(true)}

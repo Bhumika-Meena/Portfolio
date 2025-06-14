@@ -69,10 +69,34 @@ export default function Home() {
       <section id="projects" className="px-8 py-16 bg-white text-[#0a1633] my-0">
         <h2 className="text-3xl md:text-4xl font-bold mb-2 text-center font-sans">My Recent Projects</h2>
         <p className="text-center mb-8 text-lg">Here are a few design projects I've worked on recently. Want to see more? <a href="#contact" className="text-[#ff5c1a] font-semibold">Email me.</a></p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <ProjectCard title="Tic-Tac-Toe" desc="An interactive JAVA game with a clean UI for two-player matches." imgSrc="/tictactoe.png" cardColor="bg-[#1e2a4a] text-white" />
-          <ProjectCard title="King Food" desc="A web app for ordering food online with real-time tracking, secure checkout, and user-friendly menus." imgSrc="/kingFood.png" cardColor="bg-[#ff5c1a] text-white" />
-          <ProjectCard title="Travel Planner" desc="A gamified web app for planning trips, earning points through tasks, and tracking progress on a leaderboard." imgSrc="/travelPlanner.png" cardColor="bg-[#232b4a] text-white" />
+        <div className="grid grid-cols-1 gap-12 max-w-4xl mx-auto">
+          <ProjectCard 
+            title="Tic-Tac-Toe" 
+            desc="This is a two-player Tic Tac Toe game developed in Java using the Swing library. The game provides an interactive graphical interface where players can easily read the game rules, start a new match, and exit the application. It offers a simple and engaging way for two players to compete, with intuitive controls and a clear layout."
+            imgSrc="/tictactoe.png" 
+            builtWith="Java, Swing (Java GUI library)"
+             
+            codeLink="https://github.com/Bhumika-Meena"
+            
+          />
+          <ProjectCard 
+            title="King Food" 
+            desc="The Food Delivery App is a web-based platform that allows users to browse restaurant listings, view menus, and place secure online orders. It features real-time order tracking, a responsive and user-friendly interface, and authentication for both customers and admins. The app ensures smooth checkout and basic admin controls for managing listings and orders."
+            imgSrc="/kingFood.png" 
+            builtWith="React.js, Node.js, MongoDB, Tailwind CSS"
+            websiteLink="#" 
+            codeLink="https://github.com/Bhumika-Meena"
+            
+          />
+          <ProjectCard 
+            title="Travel Planner" 
+            desc="This is a web-based Travel Planner that allows users to create personalized trip itineraries. Users can select destinations, set travel dates, and receive AI-generated activity suggestions. The app includes gamification elements — users earn points and badges by completing tasks and can view their rankings on a leaderboard. It also features a real-time chat system built with Socket.io, enabling users to collaborate and share plans instantly. Additional functionalities include user authentication, admin controls, and responsive design."
+            imgSrc="/travelPlanner.png" 
+            builtWith="Next.js,React.js, Node.js, MongoDB, Tailwind CSS, Socket.io"
+            
+            codeLink="https://github.com/Bhumika-Meena"
+           
+          />
         </div>
         <div className="flex justify-center mt-8">
           <a href="https://github.com/Bhumika-Meena" className="bg-[#ff5c1a] text-white font-semibold flex items-center px-6 py-2 rounded-full hover:bg-orange-600 transition">See more on GitHub</a>
@@ -89,6 +113,76 @@ export default function Home() {
             </div>
           ))}
         </div>
+
+        {/* Experience Section */}
+        <motion.div 
+          className="mt-16 max-w-4xl mx-auto text-black p-6 bg-white rounded-lg shadow-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{ 
+            hidden: { opacity: 0, y: 50 },
+            visible: { 
+              opacity: 1, 
+              y: 0, 
+              transition: { 
+                duration: 0.8, 
+                ease: "easeOut", 
+                staggerChildren: 0.2 // Stagger animation for list items
+              }
+            }
+          }}
+        >
+          <motion.h3 
+            className="text-2xl md:text-3xl font-bold mb-6 text-center font-sans text-[#0a1633]"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+          >
+            Experience
+          </motion.h3>
+          <ul className="list-disc list-inside space-y-4 text-lg md:text-xl leading-relaxed text-gray-700">
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Developed and maintained responsive web applications using React.js and Next.js.</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Implemented robust backend solutions with Node.js and MongoDB for data management.</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Collaborated with design teams to translate UI/UX wireframes into high-quality code.</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Utilized Tailwind CSS and Bootstrap for efficient and consistent styling.</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Managed code versions and collaborated with teams using Git and GitHub.</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}> Soft Skills: Communication / Teamwork / Leadership / Creativity / Problem Solving</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}> Coursework: Artificial Intelligence, Machine Learning, Operating Systems, Computer Networks, Database
+            Management Systems, Software Engineering</motion.li>
+          </ul>
+
+          
+        </motion.div>
+        <motion.div 
+          className="mt-16 max-w-4xl mx-auto text-black p-6 bg-white rounded-lg shadow-xl"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{ 
+            hidden: { opacity: 0, y: 50 },
+            visible: { 
+              opacity: 1, 
+              y: 0, 
+              transition: { 
+                duration: 0.8, 
+                ease: "easeOut", 
+                staggerChildren: 0.2 // Stagger animation for list items
+              }
+            }
+          }}
+        >
+          <motion.h3 
+            className="text-2xl md:text-3xl font-bold mb-6 text-center font-sans text-[#0a1633]"
+            variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6 } } }}
+          >
+            Education
+          </motion.h3>
+          <ul className="list-disc list-inside space-y-4 text-lg md:text-xl leading-relaxed text-gray-700">
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Central University of Rajasthan,Rajasthan:  B.Tech in Computer Science and Engineering (CGPA/Percentage: 7.00)</motion.li>
+            <motion.li variants={{ hidden: { opacity: 0, x: -20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}>Saint Johns School CBSE, Rajasthan (Percentage: 77.2%)</motion.li>
+            
+          </ul>
+
+        </motion.div>
       </section>
       <ContactSection />
     </main>
