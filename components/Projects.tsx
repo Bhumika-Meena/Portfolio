@@ -2,7 +2,22 @@
 
 import { useState } from "react";
 
-const PROJECTS = [
+type Project = {
+  id: string;
+  label: string;
+  title: string;
+  status: string;
+  statusColor: string;
+  description: string;
+  frontend: string[];
+  backend: string[];
+  database: string[];
+  deployment: string[];
+  github: string;
+  live?: string;
+};
+
+const PROJECTS: Project[] = [
   {
     id: "travel_planner",
     label: "TRAVEL_PLANNER",
@@ -35,7 +50,18 @@ const PROJECTS = [
   }
 ];
 
-const SYSTEM_MODULES = [
+type SystemModuleKey = "frontend" | "backend" | "database" | "deployment";
+type SystemModule = {
+  key: SystemModuleKey;
+  title: string;
+  icon: string;
+  code: string;
+  metricLabel: string;
+  metricValue: string;
+  width: string;
+};
+
+const SYSTEM_MODULES: SystemModule[] = [
   { key: "frontend", title: "FRONTEND", icon: "desktop_windows", code: "0x4F1", metricLabel: "MEMORY_LOAD", metricValue: "100%", width: "w-full" },
   { key: "backend", title: "BACKEND", icon: "memory", code: "0x2A9", metricLabel: "RUNTIME_STATUS", metricValue: "ACTIVE", width: "w-4/5" },
   { key: "database", title: "DATABSE", icon: "storage", code: "0x9E2", metricLabel: "STORAGE_USED", metricValue: "CLOUD_DB", width: "w-1/3" },
@@ -44,8 +70,10 @@ const SYSTEM_MODULES = [
 
 export function Projects() {
 
-  const [activeProject, setActiveProject] = useState(PROJECTS[0].id);
-  const project = PROJECTS.find(p => p.id === activeProject);
+  const [activeProject, setActiveProject] = useState<Project["id"]>(PROJECTS[0]?.id ?? "");
+  const project = PROJECTS.find((p) => p.id === activeProject) ?? PROJECTS[0];
+
+  if (!project) return null;
 
   return (
 
@@ -244,7 +272,17 @@ export function Projects() {
 }
 
 
-function SystemCard({ icon, title, items, code, metricLabel, metricValue, width }) {
+type SystemCardProps = {
+  icon: string;
+  title: string;
+  items: string[];
+  code: string;
+  metricLabel: string;
+  metricValue: string;
+  width: string;
+};
+
+function SystemCard({ icon, title, items, code, metricLabel, metricValue, width }: SystemCardProps) {
 
   return (
 
@@ -266,7 +304,7 @@ function SystemCard({ icon, title, items, code, metricLabel, metricValue, width 
 
       <div className="flex flex-wrap gap-2 mb-4">
 
-        {items.map(tech => (
+        {items.map((tech) => (
           <span
             key={tech}
             className="rounded-md bg-blush/60 px-2 py-1 font-mono text-[10px] text-dusty-rose"
