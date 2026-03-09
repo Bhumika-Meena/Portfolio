@@ -33,7 +33,6 @@ export async function POST(request: Request) {
         process.env.CONTACT_FROM_EMAIL ??
         "Portfolio Terminal <no-reply@resend.dev>",
       to: toAddress,
-      replyTo: email,
       subject: `New message from ${name}`,
       text: [
         `Name: ${name}`,
