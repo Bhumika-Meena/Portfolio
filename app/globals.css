@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+::selection {
+  background-color: #d97b93;
+  color: #ffffff;
+}
+
+.canvas-grid {
+  background-image: radial-gradient(#1e1e1e 0.5px, transparent 0.5px);
+  background-size: 40px 40px;
+  opacity: 0.08;
+}
+
+.skeuo-shadow {
+  box-shadow:
+    0 10px 30px -5px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.rack-3d {
+  transform: perspective(1000px) rotateX(2deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rack-drawer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rack-node:hover .rack-drawer {
+  max-height: 500px;
+  opacity: 1;
+  margin-top: 1rem;
+}
+
+.rack-node:hover .rack-3d {
+  transform: perspective(1000px) rotateX(0deg) translateY(-4px);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    #d97b93,
+    #d97b93 8px,
+    transparent 8px,
+    transparent 16px
+  );
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
