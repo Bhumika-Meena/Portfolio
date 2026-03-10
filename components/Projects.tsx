@@ -64,7 +64,7 @@ type SystemModule = {
 const SYSTEM_MODULES: SystemModule[] = [
   { key: "frontend", title: "FRONTEND", icon: "desktop_windows", code: "0x4F1", metricLabel: "MEMORY_LOAD", metricValue: "100%", width: "w-full" },
   { key: "backend", title: "BACKEND", icon: "memory", code: "0x2A9", metricLabel: "RUNTIME_STATUS", metricValue: "ACTIVE", width: "w-4/5" },
-  { key: "database", title: "DATABSE", icon: "storage", code: "0x9E2", metricLabel: "STORAGE_USED", metricValue: "CLOUD_DB", width: "w-1/3" },
+  { key: "database", title: "DATABASE", icon: "storage", code: "0x9E2", metricLabel: "STORAGE_USED", metricValue: "CLOUD_DB", width: "w-1/3" },
   { key: "deployment", title: "TOOLS", icon: "cloud_upload", code: "0x7C4", metricLabel: "CLUSTER_UP", metricValue: "100%", width: "w-full" }
 ];
 
